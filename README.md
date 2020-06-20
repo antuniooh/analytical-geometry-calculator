@@ -6,6 +6,8 @@ Projeto semestral para a matéria de Geometria Analítica, disciplina cursada no
 
 O programa lê os dois pontos digitados pelo usuário, bem como os valores que formam a equação do plano. A partir desses dados é possível calcular:
 
+![image](images/main.png)
+
 **1 - Reta Obtida** - Exibe a reta formada pelos dois pontos. 
 
 **2 - Equação vetorial** - Exibe a equação vetorial da reta obtida anteriormente.
