@@ -43,7 +43,8 @@ def show():
     stretchD = Entry(window, width=5,font=("Arial",11))
     stretchD.place(x=200, y=140)
 
-    def positionCalc():
+
+    def calculateValues():
         A = [int(xPoint1.get()), int(yPoint1.get()),int(zPoint1.get())]
         B = [int(xPoint2.get()), int(yPoint2.get()),int(zPoint2.get())]
 
@@ -54,56 +55,33 @@ def show():
         c =  int(stretchC.get())
         d =  int(stretchD.get())
         n = [a, b, c]
+
+        return A, B, u, n, a, b, c, d
+
+    def positionCalc():
+        A, B, u, n, a, b, c, d = calculateValues()
 
         pos = (u[0]*n[0] + u[1]*n[1] + u[2]*n[2])
         posicao = position.Posicao(a, b, c, d,u, pos)
         res = messagebox.showinfo("Resultado",posicao)
         print(res)
+
+        return posicao
         
     def distanceCalc():
-        A = [int(xPoint1.get()), int(yPoint1.get()),int(zPoint1.get())]
-        B = [int(xPoint2.get()), int(yPoint2.get()),int(zPoint2.get())]
+        A, B, u, n, a, b, c, d = calculateValues()
 
-        u = [int(B[0]) - int(A[0]), int(B[1]) - int(A[1]),int(B[2]) - int(A[2])] # b-a
-
-        a = int(stretchA.get())
-        b = int(stretchB.get())
-        c =  int(stretchC.get())
-        d =  int(stretchD.get())
-        n = [a, b, c]
-
-        pos = (u[0]*n[0] + u[1]*n[1] + u[2]*n[2])
-        posicao = position.Posicao(a, b, c, d,u, pos)
-        distancia = distance.Distancia(a, b, c, d, A,B, posicao)
+        distancia = distance.Distancia(a, b, c, d, A,B, positionCalc())
         
         res = messagebox.showinfo("Resultado",distancia)
         print(res)
 
     def graphCalc():
-        A = [int(xPoint1.get()), int(yPoint1.get()),int(zPoint1.get())]
-        B = [int(xPoint2.get()), int(yPoint2.get()),int(zPoint2.get())]
-
-        u = [int(B[0]) - int(A[0]), int(B[1]) - int(A[1]),int(B[2]) - int(A[2])] # b-a
-
-        a = int(stretchA.get())
-        b = int(stretchB.get())
-        c =  int(stretchC.get())
-        d =  int(stretchD.get())
-        n = [a, b, c]
-
+        A, B, u, n, a, b, c, d = calculateValues()
         graph.Grafico(A,B,n,d)
 
     def calc():
-        A = [int(xPoint1.get()), int(yPoint1.get()),int(zPoint1.get())]
-        B = [int(xPoint2.get()), int(yPoint2.get()),int(zPoint2.get())]
-
-        u = [int(B[0]) - int(A[0]), int(B[1]) - int(A[1]),int(B[2]) - int(A[2])] # b-a
-
-        a = int(stretchA.get())
-        b = int(stretchB.get())
-        c =  int(stretchC.get())
-        d =  int(stretchD.get())
-        n = [a, b, c]
+        A, B, u, n, a, b, c, d = calculateValues()
 
         result = ""
 
