@@ -1,45 +1,71 @@
-# Calculadora Geometria Analitica - Vetores 
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/antuniooh/analytical-geometry-calculator">
 
-Projeto semestral para a matéria de Geometria Analítica, disciplina cursada no Centro Universitário FEI. Cálculo e informações a partir do input de dados de um vetor.
+  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/antuniooh/analytical-geometry-calculator">
+  
+  <a href="https://github.com/antuniooh/analytical-geometry-calculator/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/antuniooh/analytical-geometry-calculator">
+  </a>
+  
+   <img alt="GitHub" src="https://img.shields.io/github/license/antuniooh/analytical-geometry-calculator">
+</p>
 
-## Funcionalidade
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/antuniooh/analytical-geometry-calculator">
+    <img src="https://st4.depositphotos.com/16138592/30030/v/450/depositphotos_300303958-stock-illustration-analytic-geometry-line-vector.jpg" alt="Logo" width="550">
+  </a>
+</p>
 
-O programa lê os dois pontos digitados pelo usuário, bem como os valores que formam a equação do plano. A partir desses dados é possível calcular:
+<p align="center">
+  <img alt="Math" src="https://img.shields.io/badge/Math-red?style=for-the-badge&logo=math&logoColor=white"/>
+  <img alt="Python" src="https://img.shields.io/badge/Python-darkblue?style=for-the-badge&logo=python&logoColor=white"/>
+    <img alt="Graph" src="https://img.shields.io/badge/Graph-darkrgreen?style=for-the-badge&logo=graph&logoColor=white"/>
+</p>
 
-![image](images/main.png)
 
-**1 - Reta Obtida** - Exibe a reta formada pelos dois pontos. 
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#-about-the-project">About The Project</a>
+    </li>
+    <li>
+      <a href="#-documentation">Documentation</a>
+    </li>
+    <li>
+      <a href="#-how-to-run">How To Run</a>
+    </li>
+  </ol>
+</details>
 
-**2 - Equação vetorial** - Exibe a equação vetorial da reta obtida anteriormente.
 
-**3 - Equação da Reta** - Exibe a equação de reta formada a partir das entradas do usuário.
+<!-- ABOUT THE PROJECT -->
+## 💻 About The Project
+The project consists of a vector calculator. The input reads the two points entered by the user, as well as the values ​​that make up the plane's equation. From these data it is possible to calculate: Obtained Line, Vector Equation, Line Equation, N Vector, Relative Position, Distance, Line and Plane Graph
 
-**4 - Vetor N** - Exibe o vetor N obtido a partir da equação de reta.
+![app](https://github.com/antuniooh/analytical-geometry-calculator/blob/master/images/app.gif)
 
-**5 - Posição relativa** - Exibe a posição relativa entre reta e plano, podendo ser transversal, paralela ou até mesmo contida.
 
-**6 - Distância** - Informa a distância entre a reta e o plano, podendo ser nula de acordo com a posição relativa.
-
-**7 - Gráfico de reta e plano** - Exibe numa nova tela a reta e o plano formado pelos valores digitados pelo usuário.
-
-![image](images/example.png)
-
-## Execução
-
-Tanto no Windows quanto no Linux a execução é feita a partir da execução da linha a seguir no terminal, ou utilizando uma IDE de sua preferência. É necessário instalar certas bibliotecas antes de executar o projeto em si.
+<!-- HOW TO RUN -->
+## 🚀 How To Run
 
 ```bash
-pip install numpy
-pip install -U Pillow
-pip install matplotlib && pip install --upgrade matplotlib
-```
 
-```bash
-python main.py
-```
+# Clone the repository
+$ git clone https://github.com/antuniooh/analytical-geometry-calculator.git
 
-Entretanto, utilizando apenas a linha acima é possivel que o compilador de sua máquina utilize o python em sua versão 2.7. Para resolver isso é mais vantajoso utilizar:
+# Access the project folder in your terminal / cmd
+$ cd analytical-geometry-calculator
 
-```bash
-python3 main.py
+# In both Windows and Linux, the execution is done by executing the following line in the terminal, or using an IDE of your choice. It is necessary to install certain libraries before running the project itself.
+$ pip install numpy
+$ pip install -U Pillow
+$ pip install matplotlib && pip install --upgrade matplotlib
+
+# Open project
+$ python main.py
+
 ```
